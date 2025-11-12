@@ -1,0 +1,26 @@
+[
+  {
+    "id": "greeting",
+    "name": "Greeting Prompt",
+    "template": "Say hello to {name} in a friendly way.",
+    "description": "Generates a friendly greeting"
+  },
+  {
+    "id": "explain",
+    "name": "Explanation Prompt",
+    "template": "Explain {topic} in simple terms that a beginner can understand.",
+    "description": "Explains a topic in simple terms"
+  },
+  {
+    "id": "summarize",
+    "name": "Summarization Prompt",
+    "template": "Summarize the following text in {words} words: {text}",
+    "description": "Summarizes text to specified word count"
+  },
+  {
+    "id": "translate",
+    "name": "Translation Prompt",
+    "template": "Translate the following text to {language}: {text}",
+    "description": "Translates text to specified language"
+  }
+]
