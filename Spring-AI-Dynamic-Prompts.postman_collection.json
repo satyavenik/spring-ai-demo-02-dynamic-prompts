@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "spring-ai-dynamic-prompts-001",
+		"name": "Spring AI Dynamic Prompts API",
+		"description": "Complete API collection for Spring AI Dynamic Prompts demo application with all prompt templates",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Prompts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/prompts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"prompts"
+					]
+				},
+				"description": "Retrieve all available prompt templates from the repository"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Prompt by ID - Greeting",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/prompts/greeting",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"prompts",
+						"greeting"
+					]
+				},
+				"description": "Get the greeting prompt template details"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Prompt by ID - Explain",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/prompts/explain",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"prompts",
+						"explain"
+					]
+				},
+				"description": "Get the explanation prompt template details"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Prompt by ID - Summarize",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/prompts/summarize",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"prompts",
+						"summarize"
+					]
+				},
+				"description": "Get the summarization prompt template details"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Prompt by ID - Translate",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/prompts/translate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"prompts",
+						"translate"
+					]
+				},
+				"description": "Get the translation prompt template details"
+			},
+			"response": []
+		},
+		{
+			"name": "Execute Greeting Prompt",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"John\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/prompts/greeting/execute",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"prompts",
+						"greeting",
+						"execute"
+					]
+				},
+				"description": "Execute the greeting prompt with a name parameter. Template: 'Say hello to {name} in a friendly way.'"
+			},
+			"response": []
+		},
+		{
+			"name": "Execute Explain Prompt",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"topic\": \"quantum computing\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/prompts/explain/execute",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"prompts",
+						"explain",
+						"execute"
+					]
+				},
+				"description": "Execute the explanation prompt with a topic parameter. Template: 'Explain {topic} in simple terms that a beginner can understand.'"
+			},
+			"response": []
+		},
+		{
+			"name": "Execute Summarize Prompt",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"words\": \"10\",\n  \"text\": \"today I woke up in the morning early and went to santa parade. it was very nice and had good time there and back to home by afternoon\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/prompts/summarize/execute",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"prompts",
+						"summarize",
+						"execute"
+					]
+				},
+				"description": "Execute the summarization prompt with words and text parameters. Template: 'Summarize the following text in {words} words: {text}'"
+			},
+			"response": []
+		},
+		{
+			"name": "Execute Translate Prompt",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"language\": \"Spanish\",\n  \"text\": \"Hello, how are you today? I hope you are having a wonderful day.\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/prompts/translate/execute",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"prompts",
+						"translate",
+						"execute"
+					]
+				},
+				"description": "Execute the translation prompt with language and text parameters. Template: 'Translate the following text to {language}: {text}'"
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
+
